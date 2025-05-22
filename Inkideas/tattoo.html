@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>InkIdeas - Tattoo Inspiration</title>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #222;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 30vh;
+}
+
+header {
+  background-color: #333;
+  padding: 1em 0;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  margin: 0;
+  padding: 5px;
+  font-size: 14mm;
+  
+}
+.home{
+  font-family: 'Arial', sans-serif;
+  padding: 4em 2px;
+  background: #333;
+  text-align: center;
+  text: center;
+  color: #aaa;
+  font-size: 15mm;
+  
+}
+.a {
+font-family: 'Arial', sans-serif;
+  padding: 1mm;
+  background: #333;
+  text: center;
+  color: #aaa;
+}
+.b {
+  color: #333;
+  background: #aaa;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+}
+.login{
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12;
+  
+}
+.back{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #aaa; 
+  background: #333;
+  border: 20;
+  padding: 20px 30mm;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  font-size-adjust: 20mm;
+}
+.search{
+  
+}
+main {
+  flex: 15;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  grid-gap: 15px;
+
+}
+
+.tattoo-card {
+  background-color: #444;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.tattoo-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.tattoo-title {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1.4em; 
+}
+
+.tattoo-style {
+  color: #aaa;
+  font-size: smaller;
+}
+
+footer {
+  background-color: #333;
+  padding: 1em 0;
+  text-align: center;
+  color: #aaa;
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+  
+  <header>
+    <div><h1 id="1">InkIdeas</h1></div>
+    <div>
+    <a class="a" href="#1"><button class="b">HOME</button></a>
+    <a class="a" href="#">VLOG</a>
+    <a class="a" href="#">ABOUT</a>
+    <a class="a" href="#">DESIGN</a>
+    <a class="a" href="#">CONTACT</a>
+  </div>
+  </header>
+  <div>
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search...">
+<script>
+function myFunction() {
+  var input, filter, ul, li, i, txtValue;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myList");
+  li = ul.getElementsByTagName("li");
+
+  for (i = 0; i < li.length; i++) {
+    txtValue = li[i].textContent || li[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+  </div>
+    <div>
+      <p class="home">Find Your Perfect Tattoo</p>
+    </div>
+  <main>
+    <div class="tattoo-card">
+      <img src="mY_picture/Snaptik.app_742327972052925158920.jpg" alt="Tattoo 1" class="tattoo-image">
+      <h2 class="tattoo-title"><a href="floral.html"><button class="b">Floral Design</button></a></h2>
+      <p class="tattoo-style">Watercolor</p>
+    </div>
+    <div class="tattoo-card">
+      <img src="mY_picture/geo.jpg" alt="Tattoo 2" class="tattoo-image">
+      <h2 class="tattoo-title"><a href="geometric.html"><button class="b">Geometric Shapes</button></a></h2>
+      <p class="tattoo-style">Blackwork</p>
+    </div>
+      <div class="tattoo-card">
+    <img src="my_pic/Snaptik.app_74724089816218534622.jpg" alt="Tattoo 3" class="tattoo-image">
+    <h2 class="tattoo-title"><a href="tribal.html"><button class="b">Tribal Design</button></a></h2>
+    <p class="tattoo-style">Blackwork</p>
+  </div>
+  <div class="tattoo-card">
+    <img src="mY_picture/nature.jpg" alt="Tattoo 4" class="tattoo-image">
+    <h2 class="tattoo-title"><a href="nature.html"><button class="b">Nature design</button></a></h2>
+    <p class="tattoo-style">Water</p>
+  </div>
+   
+
+   
+  </main>
+  <footer>
+    <p>&copy; 2025 InkIdeas</p>
+  </footer>
+    <button class="back"><a href="#1">BACK</a></button>
+</body>
+</html>
